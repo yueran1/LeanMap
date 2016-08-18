@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SharingIsCaring</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my_pc">MyPCActivity</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_add_pokemon">AddPokemonActivity</string>
+    <string name="title_activity_marketplace">MarketplaceActivity</string>
+    <string name="title_activity_trainer_card">TrainerCardActivity</string>
+    <string name="title_activity_view_pokemon">ViewPokemonActivity</string>
+    <string name="title_activity_bid_item">BidItemActivity</string>
+    <string name="title_activity_edit_pokemon">EditPokemonActivity</string>
+    <string name="title_activity_owned_borrowed_pokemon">OwnedBorrowedPokemonActivity</string>
+
+    <string name="status_available">Available</string>
+    <string name="status_pending">Pending</string>
+</resources>

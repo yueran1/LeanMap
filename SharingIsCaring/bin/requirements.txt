@@ -1,0 +1,38 @@
+# Planning:  
+## Work accomplished:  
+  - The user is able to add items to their list of items.  
+  - The user is able to view a list of the items that they own.  
+  - The user is able to view a single item by selecting it from a list of items.  
+  - The user is able to edit the properties of an item that they own.  
+  - The user is able to delete a thing from their things.  
+  - An item in the database has a status that is either Unavailable, Available, Bidded, or Borrowed.  
+  - Usernames are guaranteed to be unique.  
+  - A user can edit their own info.  
+  - A user can select the username of another user and view that user's profile.  
+  - A user can perform a search of all items in the database, where the searchterm they provide is matched against appropriate fields in the object.  
+  - When viewing an item, the item's name, description, its owner, its status, and its properties are displayed.  
+  - A user can make a bid on an item by selecting an available item when searching in the marketplace.  
+  - Notifications are given to the user about new bids on their items by querying the database and retrieving all notifications that are related to that user.  
+  - Bids on an item are displayed below its description when viewing the item.  
+  - Offline updates are pushed by referring to a local serialized copy of the user.  
+  - The user can select a photograph from their disk to associate with their item.  
+  - While the photograph is associated with the pokemon, the user can view the image.  
+  - The Damage Calculator is capable of populating itself with two pokemon.  
+
+## Work to do:  
+  - Refine the search function, allowing the user to specify which fields they prefer to search.  
+  - Have making a bid on an item update the view of the item.  
+  - Ensure that the user's items that are status: pending are displayed correctly.  
+  - Wipe the notifications for a user so that they don't continue to get the same notifications.  
+  - The user cannot accept a bid on their items yet.  
+  - The user cannot decline a bid on their items yet.  
+  - The user cannot view their borrowed things because they cannot yet accept the bid.  
+  - The user cannot return their borrowed thing because they
+  - Offline updates could be tracked as a queue of Tasks that are iterated over and executed when connectivity resumes.  
+  - The photograph's size needs to be controlled for.  
+  - The photograph needs to be introduced to the ElasticSearch database so that other users can view the photograph.
+  - The photograph can be stored in a separate type from the pokemon in the database so that searching is not adversely affected.  
+  - The user cannot delete the photograph from their item.  
+  - The user cannot size the photograph.  
+  - Location requirements are not implemented.  
+  - The damage calculator needs to take values from the pokemon and use them to calculate damage inflicted.

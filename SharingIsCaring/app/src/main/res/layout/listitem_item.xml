@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="@color/button" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameListItem"
+        android:paddingTop="2dp"
+        android:paddingStart="2dp"
+        android:text="&lt;Pokémon>"
+        android:textColor="@color/text"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/offerListItem"
+        android:text="$0.00/hr"
+        android:textColor="@color/text"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBaseline="@id/nameListItem"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusListItem"
+        android:paddingEnd="2dp"
+        android:text="Unavailable"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@id/nameListItem"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="22dp"
+        android:id="@+id/descriptionListItem"
+        android:paddingStart="2dp"
+        android:paddingTop="2dip"
+        android:paddingBottom="3dip"
+        android:text="A Pokémon's description will go here. "
+        android:textColor="@color/text"
+        android:layout_marginEnd="11dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/nameListItem"
+        android:textSize="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/footerListItem"
+        android:paddingEnd="2dp"
+        android:text="..."
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@id/descriptionListItem"
+        android:textSize="12dp" />
+
+</RelativeLayout>

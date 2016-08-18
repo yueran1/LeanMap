@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="  Username:"
+        android:textColor="#EAEAEA"
+        android:id="@+id/Username"
+        android:layout_marginLeft="0dp"
+        android:layout_alignTop="@+id/registerUsername"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerUsername"
+        android:textColor="#EAEAEA"
+        android:background="#666666"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/Username"
+        android:layout_marginTop="17dp"
+        android:inputType="textEmailAddress"  />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Password:"
+        android:textColor="#EAEAEA"
+        android:id="@+id/password"
+        android:layout_alignTop="@+id/registerPassword"
+        android:layout_toStartOf="@+id/registerUsername" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerPassword"
+        android:textColor="#EAEAEA"
+        android:background="#666666"
+        android:layout_below="@+id/registerUsername"
+        android:layout_marginTop="17dp"
+        android:layout_alignEnd="@+id/registerUsername"
+        android:layout_toEndOf="@+id/password"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Contact Information"
+        android:textSize="26dp"
+        android:textColor="#EAEAEA"
+        android:id="@+id/textView4"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/registerPassword"
+        android:layout_alignEnd="@+id/registerUsername" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="     Email:"
+        android:textColor="#EAEAEA"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/registerEmail"
+        android:background="#666666"
+        android:textColor="#EAEAEA"
+        android:layout_below="@+id/textView4"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_above="@+id/textView6"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="     Phone:"
+        android:textColor="#EAEAEA"
+        android:id="@+id/textView6"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textColor="#EAEAEA"
+        android:background="#666666"
+        android:id="@+id/registerPhone"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignStart="@+id/registerEmail"
+        android:layout_alignEnd="@+id/registerEmail"
+        android:layout_alignTop="@+id/textView6"
+        android:inputType="phone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="     Street address:"
+        android:textColor="#EAEAEA"
+        android:id="@+id/textView7"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:textColor="#EAEAEA"
+        android:background="#666666"
+        android:id="@+id/registerAddress"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_alignEnd="@+id/registerCity"
+        android:layout_alignBottom="@+id/textView7"
+        android:inputType="textPostalAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="     City:"
+        android:textColor="#EAEAEA"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textColor="#EAEAEA"
+        android:background="#666666"
+        android:id="@+id/registerCity"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignEnd="@+id/registerPhone"
+        android:layout_toEndOf="@+id/textView8"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="     Province:"
+        android:textColor="#EAEAEA"
+        android:id="@+id/textView9"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/registerProvince"
+
+        android:textColor="#EAEAEA"
+        android:background="#666666"
+        android:layout_alignTop="@+id/textView9"
+        android:layout_alignEnd="@+id/registerPhone"
+        android:layout_above="@+id/textView10"
+        android:layout_toEndOf="@+id/textView9"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="     Postal Code:"
+        android:textColor="#EAEAEA"
+
+        android:id="@+id/textView10"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/registerPostal"
+        android:textColor="#EAEAEA"
+        android:background="#666666"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_alignEnd="@+id/registerProvince"
+        android:layout_toEndOf="@+id/textView10"
+        android:inputType="text"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/register"
+        android:onClick="finishRegistration"
+        android:textColor="#EAEAEA"
+        android:background="#121212"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

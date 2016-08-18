@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&lt;User's Name>"
+        android:textColor="@color/text"
+        android:id="@+id/textNameUserOwn"
+        android:autoText="false"
+        style="@style/Base.DialogWindowTitle.AppCompat"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_weight="0.00"
+        android:textSize="34dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/text"
+        android:layout_marginLeft="25dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="email: "
+            android:id="@+id/textUserEmailI"
+            android:textColor="@color/text"
+            android:paddingLeft="35dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="&lt;email Address>"
+            android:id="@+id/textUserEmailII"
+            android:textColor="@color/text"
+            android:background="@color/editableText"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="7dp"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="phone: "
+            android:id="@+id/textUserPhoneI"
+            android:textColor="@color/text"
+            android:paddingLeft="35dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="&lt;Phone Number>"
+            android:id="@+id/textUserPhoneII"
+            android:textColor="@color/text"
+            android:background="@color/editableText"
+            android:layout_marginRight="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="street address: "
+            android:id="@+id/textUserAddressI"
+            android:textColor="@color/text"
+            android:paddingLeft="35dp" />
+
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="&lt;Street Address>"
+            android:id="@+id/textUserAddressII"
+            android:textColor="@color/text"
+            android:background="@color/editableText"
+            android:layout_marginRight="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="city: "
+            android:id="@+id/textUserCityI"
+            android:textColor="@color/text"
+            android:paddingLeft="35dp" />
+
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="&lt;City>"
+            android:id="@+id/textUserCityII"
+            android:textColor="@color/text"
+            android:background="@color/editableText"
+            android:layout_marginRight="25dp"
+            android:layout_weight="0"
+            android:layout_marginLeft="105dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="province: "
+            android:id="@+id/textUserProvinceI"
+            android:textColor="@color/text"
+            android:paddingLeft="35dp" />
+
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="&lt;Province>"
+            android:id="@+id/textUserProvinceII"
+            android:textColor="@color/text"
+            android:background="@color/editableText"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="55dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="postal code: "
+            android:id="@+id/textUserPostalI"
+            android:textColor="@color/text"
+            android:paddingLeft="35dp" />
+
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="&lt;Postal Code>"
+            android:id="@+id/textUserPostalII"
+            android:textColor="@color/text"
+            android:background="@color/editableText"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/savePlayerCard"
+        android:onClick="saveTrainerCard"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:background="@color/button"
+        android:textColor="@color/text" />
+
+</LinearLayout>

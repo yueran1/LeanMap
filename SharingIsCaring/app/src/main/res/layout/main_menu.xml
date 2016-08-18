@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Current Trainer:  &lt;Invalid Trainer>"
+        android:id="@+id/currentTrainerMain"
+        android:textSize="18dp"
+        android:textColor="#EAEAEA"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Connection:         Online"
+        android:id="@+id/currentConnection"
+        android:textSize="18dp"
+        android:textColor="#EAEAEA"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/currentTrainerMain"
+        android:layout_marginTop="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Logout"
+        android:onClick="logout"
+        android:id="@+id/button4"
+        android:background="#121212"
+        android:textColor="#EAEAEA"
+        android:layout_alignTop="@+id/currentTrainerMain"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="75dp"
+        android:text="My PC"
+        android:onClick="myPC"
+        android:background="#121212"
+        android:textColor="#EAEAEA"
+        android:id="@+id/button5"
+
+        android:layout_below="@+id/currentConnection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="75dp"
+        android:background="#121212"
+        android:text="Marketplace"
+        android:onClick="marketplace"
+        android:textColor="#EAEAEA"
+        android:id="@+id/button6"
+        android:layout_below="@+id/button5"
+        android:layout_marginTop="8dp"
+        android:layout_alignStart="@+id/button5" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="75dp"
+        android:text="Trainer Card"
+        android:onClick="ownTrainerCard"
+        android:background="#121212"
+        android:textColor="#EAEAEA"
+        android:id="@+id/button7"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/button6"
+        android:layout_alignStart="@+id/button6" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="75dp"
+        android:text="Damage Calculator"
+        android:onClick="damageCalculator"
+        android:background="#121212"
+        android:textColor="#EAEAEA"
+        android:id="@+id/calculate"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/button7"
+        android:layout_alignStart="@+id/button7" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:text="Push Updates to Internet"
+        android:onClick="pushUpdates"
+        android:background="#121212"
+        android:textColor="#EAEAEA"
+        android:id="@+id/pushUpdates"
+        android:layout_alignBottom="@+id/calculate"
+        android:layout_alignEnd="@+id/button4" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:text="Map"
+        android:onClick="openMap"
+        android:background="#121212"
+        android:textColor="#EAEAEA"
+        android:id="@+id/mapButton"
+        android:layout_alignBaseline="@+id/button6"
+        android:layout_alignStart="@+id/pushUpdates" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Notifications"
+        android:textColor="#EAEAEA"
+        android:id="@+id/notifications"
+
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/calculate"
+        android:layout_marginLeft="30dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewNotifications"
+        android:layout_below="@+id/notifications"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"/>
+
+</RelativeLayout>

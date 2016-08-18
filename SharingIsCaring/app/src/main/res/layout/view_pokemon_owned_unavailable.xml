@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#424242" >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        style="@style/Base.DialogWindowTitle.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&lt;Pokémon>"
+        android:textColor="@color/text"
+        android:id="@+id/editNameOU"
+        android:autoText="false"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="34dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_below="@id/editNameOU"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/dividerOU"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/text" >
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text="Unavailable"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:id="@+id/editStatusOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerOU"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Owner: "
+        android:id="@+id/textOwnerOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/editStatusOU"
+        android:layout_alignStart="@+id/editStatusOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="&lt;Trainer>"
+        android:id="@+id/editOwnerOU"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textOwnerOU"
+        android:layout_toEndOf="@+id/textOwnerOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Lv. "
+        android:id="@+id/textLevelOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textOwnerOU"
+        android:layout_alignStart="@+id/textOwnerOU" />
+
+    <EditText
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="number"
+        android:id="@+id/editLevelOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textLevelOU"
+        android:layout_toEndOf="@+id/textLevelOU" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:hint="Type 1"
+        android:inputType="text"
+        android:id="@+id/editType1OU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/textLevelOU"
+        android:layout_alignStart="@+id/textLevelOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" / "
+        android:id="@+id/dividerTypeOU"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/editType1OU"
+        android:layout_toEndOf="@+id/editType1OU" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:hint="Type 2"
+        android:inputType="text"
+        android:id="@+id/editType2OU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/editType1OU"
+        android:layout_toEndOf="@+id/dividerTypeOU" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/photoOU"
+        android:src="@drawable/ic_action_name3"
+        android:onClick="photo"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/editType1OU"
+        android:layout_alignStart="@+id/editType1OU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nature: "
+        android:id="@+id/textNatureOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/photoOU"
+        android:layout_alignStart="@+id/editType1OU" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editNatureOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textNatureOU"
+        android:layout_alignEnd="@id/editStatusOU"
+        android:layout_toEndOf="@+id/textNatureOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ability: "
+        android:id="@+id/textAbilityOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textNatureOU"
+        android:layout_alignStart="@+id/editType1OU" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editAbilityOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textAbilityOU"
+        android:layout_alignStart="@id/editNatureOU"
+        android:layout_alignEnd="@id/editStatusOU"
+        android:layout_toEndOf="@+id/textNatureOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item: "
+        android:id="@+id/textItemOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textAbilityOU"
+        android:layout_alignStart="@+id/editType1OU" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editItemOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textItemOU"
+        android:layout_alignStart="@id/editNatureOU"
+        android:layout_alignEnd="@id/editStatusOU"
+        android:layout_toEndOf="@+id/textItemOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="HP: "
+        android:id="@+id/textHPOU"
+        android:textColor="@color/text"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@id/dividerOU"
+        android:layout_toEndOf="@id/editStatusOU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="number"
+        android:id="@+id/editHPOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@id/textHPOU"
+        android:layout_below="@id/textHPOU"
+        android:layout_alignStart="@+id/editDefenseOU"
+        android:layout_toEndOf="@id/textHPOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Attack: "
+        android:id="@+id/textAttackOU"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@id/editOwnerOU"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@id/editStatusOU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="number"
+        android:id="@+id/editAttackOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editHPOU"
+        android:layout_alignBaseline="@id/textAttackOU"
+        android:layout_alignStart="@+id/editDefenseOU"
+        android:layout_toEndOf="@id/textAttackOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Defense: "
+        android:id="@+id/textDefenseOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_alignBaseline="@id/editLevelOU"
+        android:layout_alignStart="@id/textAttackOU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="number"
+        android:id="@+id/editDefenseOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@id/textDefenseOU"
+        android:layout_toEndOf="@id/textDefenseOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sp. Atk: "
+        android:id="@+id/textSpAtkOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_alignBaseline="@id/editType2OU"
+        android:layout_alignStart="@id/textAttackOU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="number"
+        android:id="@+id/editSpAtkOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editDefenseOU"
+        android:layout_alignBaseline="@id/textSpAtkOU"
+        android:layout_alignStart="@+id/editDefenseOU"
+        android:layout_toEndOf="@id/textSpAtkOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sp. Def: "
+        android:id="@+id/textSpDefOU"
+        android:textColor="@color/text"
+        android:layout_alignTop="@id/photoOU"
+        android:layout_alignStart="@id/textAttackOU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="number"
+        android:id="@+id/editSpDefOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editSpAtkOU"
+        android:layout_alignBaseline="@id/textSpDefOU"
+        android:layout_alignStart="@+id/editDefenseOU"
+        android:layout_toEndOf="@id/textSpDefOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Speed: "
+        android:id="@+id/textSpeedOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textSpDefOU"
+        android:layout_alignStart="@id/textSpDefOU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="number"
+        android:id="@+id/editSpeedOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editSpDefOU"
+        android:layout_alignBaseline="@id/textSpeedOU"
+        android:layout_alignStart="@+id/editDefenseOU"
+        android:layout_toEndOf="@id/textSpeedOU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24dp"
+        android:text="Moves"
+        android:id="@+id/textMovesOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="26dp"
+        android:layout_below="@id/textSpeedOU"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@id/editNatureOU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:hint="Move 1"
+        android:inputType="text"
+        android:id="@+id/editMove1OU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textMovesOU"
+        android:layout_marginStart="10dp"
+        android:layout_alignStart="@id/textMovesOU"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:hint="Move 2"
+        android:inputType="text"
+        android:id="@+id/editMove2OU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove1OU"
+        android:layout_alignStart="@+id/editMove1OU"
+        android:layout_alignEnd="@id/editMove1OU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:hint="Move 3"
+        android:inputType="text"
+        android:id="@+id/editMove3OU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove2OU"
+        android:layout_alignStart="@+id/editMove2OU"
+        android:layout_alignEnd="@id/editMove2OU" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:hint="Move 4"
+        android:inputType="text"
+        android:id="@+id/editMove4OU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove3OU"
+        android:layout_alignStart="@+id/editMove3OU"
+        android:layout_alignEnd="@id/editMove3OU" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text="Description"
+        android:id="@+id/textDescriptionOU"
+        android:textColor="@color/text"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/textItemOU"
+        android:layout_marginStart="18dp" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:inputType="text"
+        android:gravity="top|left"
+        android:id="@+id/editDescriptionOU"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textDescriptionOU"
+        android:layout_alignStart="@+id/textItemOU"
+        android:layout_alignEnd="@id/editMove4OU" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Make Available"
+        android:id="@+id/buttonAvailable"
+        android:onClick="makeAvailable"
+        android:textColor="@color/text"
+        android:background="@color/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/editDescriptionOU" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/buttonSave"
+        android:onClick="savePokemon"
+        android:textColor="@color/text"
+        android:background="@color/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/buttonAvailable" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/buttonDelete"
+        android:onClick="deletePokemon"
+        android:textColor="@color/text"
+        android:background="@color/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp"
+        android:layout_below="@+id/buttonSave" />
+
+</RelativeLayout>

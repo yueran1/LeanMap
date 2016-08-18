@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@color/background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokemon1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Pokemon1"
+            android:textColor="@color/text"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner: Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/OwnerTag1"
+            android:textColor="@color/text"
+            android:layout_below="@id/Pokemon1"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lv: 100"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/LevelTag1"
+            android:textColor="@color/text"
+            android:layout_below="@id/OwnerTag1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type1 "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Type1Pokemon1"
+            android:textColor="@color/text"
+            android:layout_below="@id/LevelTag1"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type2 "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Type2Pokemon1"
+            android:textColor="@color/text"
+            android:layout_below="@id/LevelTag1"
+            android:layout_toEndOf="@id/Type1Pokemon1"/>
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:id="@+id/attachPhoto"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/ic_action_name3"
+            android:layout_below="@+id/Type1Pokemon1"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/PercentDamage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Moves"
+            android:id="@+id/MovesTitle"
+            android:textColor="@color/text"
+            android:layout_alignBottom="@+id/OwnerTag1"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move1"
+            android:id="@+id/Move1"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/MovesTitle"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move2"
+            android:id="@+id/Move2"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move1"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move3"
+            android:id="@+id/Move3"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move2"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move4"
+            android:id="@+id/Move4"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move3"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="0%"
+            android:id="@+id/PercentDamage"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move4"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentStart="true" />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokemon2"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Pokemon2"
+            android:textColor="@color/text"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/PercentDamage"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner: Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/OwnerTag2"
+            android:textColor="@color/text"
+            android:layout_below="@id/Pokemon2"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lv: 100"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/LevelTag2"
+            android:textColor="@color/text"
+            android:layout_below="@id/OwnerTag2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type1 "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Type1Pokemon2"
+            android:textColor="@color/text"
+            android:layout_below="@id/LevelTag2"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type2 "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/Type2Pokemon2"
+            android:textColor="@color/text"
+            android:layout_below="@id/LevelTag2"
+            android:layout_toEndOf="@id/Type1Pokemon2"/>
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:id="@+id/attachPhoto2"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/ic_action_name3"
+            android:layout_below="@+id/Type1Pokemon2"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/PercentDamage2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Moves"
+            android:id="@+id/MovesTitle2"
+            android:textColor="@color/text"
+            android:layout_alignBottom="@+id/OwnerTag2"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move1"
+            android:id="@+id/Move5"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/MovesTitle2"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move2"
+            android:id="@+id/Move6"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move5"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move3"
+            android:id="@+id/Move7"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move6"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="Move4"
+            android:id="@+id/Move8"
+            android:onClick="calculateDamage"
+            android:clickable="true"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move7"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:text="0%"
+            android:id="@+id/PercentDamage2"
+            android:textColor="@color/text"
+            android:layout_below="@id/Move8"
+            android:layout_marginLeft="165dp"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select pokemon 1"
+            android:id="@+id/selectButton1"
+            android:onClick="selectPokemon1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Pokemon 2"
+            android:id="@+id/selectButton2"
+            android:onClick="selectPokemon2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

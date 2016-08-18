@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#424242" >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        style="@style/Base.DialogWindowTitle.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&lt;Pokémon>"
+        android:textColor="@color/text"
+        android:id="@+id/editNameOB"
+        android:autoText="false"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="34dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_below="@id/editNameOB"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/dividerOB"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/text" >
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text="Borrowed"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:id="@+id/editStatusOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerOB"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Owner: "
+        android:id="@+id/textOwnerOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/editStatusOB"
+        android:layout_alignStart="@+id/editStatusOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="&lt;Trainer>"
+        android:id="@+id/editOwnerOB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textOwnerOB"
+        android:layout_toEndOf="@+id/textOwnerOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Lv."
+        android:id="@+id/textLevelOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textOwnerOB"
+        android:layout_alignStart="@+id/textOwnerOB" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editLevelOB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textLevelOB"
+        android:layout_toEndOf="@+id/textLevelOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editType1OB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/textLevelOB"
+        android:layout_alignStart="@+id/textLevelOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" / "
+        android:id="@+id/dividerTypeOB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/editType1OB"
+        android:layout_toEndOf="@+id/editType1OB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editType2OB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/editType1OB"
+        android:layout_toEndOf="@+id/dividerTypeOB" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/photoOB"
+        android:src="@drawable/ic_action_name3"
+        android:onClick="photo"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/editType1OB"
+        android:layout_alignStart="@+id/editType1OB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nature: "
+        android:id="@+id/textNatureOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/photoOB"
+        android:layout_alignStart="@+id/editType1OB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editNatureOB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textNatureOB"
+        android:layout_alignEnd="@id/editStatusOB"
+        android:layout_toEndOf="@+id/textNatureOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ability: "
+        android:id="@+id/textAbilityOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textNatureOB"
+        android:layout_alignStart="@+id/editType1OB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editAbilityOB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textAbilityOB"
+        android:layout_alignStart="@id/editNatureOB"
+        android:layout_alignEnd="@id/editStatusOB"
+        android:layout_toEndOf="@+id/textNatureOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item: "
+        android:id="@+id/textItemOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textAbilityOB"
+        android:layout_alignStart="@+id/editType1OB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editItemOB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textItemOB"
+        android:layout_alignStart="@id/editNatureOB"
+        android:layout_alignEnd="@id/editStatusOB"
+        android:layout_toEndOf="@+id/textItemOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="HP: "
+        android:id="@+id/textHPOB"
+        android:textColor="@color/text"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@id/dividerOB"
+        android:layout_toEndOf="@id/editStatusOB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editHPOB"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@id/textHPOB"
+        android:layout_below="@id/textHPOB"
+        android:layout_alignStart="@+id/editDefenseOB"
+        android:layout_toEndOf="@id/textHPOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Attack: "
+        android:id="@+id/textAttackOB"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@id/editOwnerOB"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@id/editStatusOB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editAttackOB"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editHPOB"
+        android:layout_alignBaseline="@id/textAttackOB"
+        android:layout_alignStart="@+id/editDefenseOB"
+        android:layout_toEndOf="@id/textAttackOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Defense: "
+        android:id="@+id/textDefenseOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_alignBaseline="@id/editLevelOB"
+        android:layout_alignStart="@id/textAttackOB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editDefenseOB"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@id/textDefenseOB"
+        android:layout_toEndOf="@id/textDefenseOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sp. Atk: "
+        android:id="@+id/textSpAtkOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_alignBaseline="@id/editType2OB"
+        android:layout_alignStart="@id/textAttackOB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editSpAtkOB"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editDefenseOB"
+        android:layout_alignBaseline="@id/textSpAtkOB"
+        android:layout_alignStart="@+id/editDefenseOB"
+        android:layout_toEndOf="@id/textSpAtkOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sp. Def: "
+        android:id="@+id/textSpDefOB"
+        android:textColor="@color/text"
+        android:layout_alignTop="@id/photoOB"
+        android:layout_alignStart="@id/textAttackOB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editSpDefOB"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editSpAtkOB"
+        android:layout_alignBaseline="@id/textSpDefOB"
+        android:layout_alignStart="@+id/editDefenseOB"
+        android:layout_toEndOf="@id/textSpDefOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Speed: "
+        android:id="@+id/textSpeedOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textSpDefOB"
+        android:layout_alignStart="@id/textSpDefOB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editSpeedOB"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editSpDefOB"
+        android:layout_alignBaseline="@id/textSpeedOB"
+        android:layout_alignStart="@+id/editDefenseOB"
+        android:layout_toEndOf="@id/textSpeedOB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24dp"
+        android:text="Moves"
+        android:id="@+id/textMovesOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="26dp"
+        android:layout_below="@id/textSpeedOB"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@id/editNatureOB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editMove1OB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textMovesOB"
+        android:layout_marginStart="10dp"
+        android:layout_alignStart="@id/textMovesOB"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editMove2OB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove1OB"
+        android:layout_alignStart="@+id/editMove1OB"
+        android:layout_alignEnd="@id/editMove1OB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editMove3OB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove2OB"
+        android:layout_alignStart="@+id/editMove2OB"
+        android:layout_alignEnd="@id/editMove2OB" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editMove4OB"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove3OB"
+        android:layout_alignStart="@+id/editMove3OB"
+        android:layout_alignEnd="@id/editMove3OB" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text="Description"
+        android:id="@+id/textDescriptionOB"
+        android:textColor="@color/text"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/textItemOB"
+        android:layout_marginStart="18dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:id="@+id/borderDescriptionOB"
+        android:padding="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textDescriptionOB"
+        android:layout_alignStart="@+id/textItemOB"
+        android:layout_alignEnd="@id/editMove4OB"
+        android:background="@color/editableText" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:inputType="text"
+            android:gravity="top|left"
+            android:id="@+id/editDescriptionOB"
+            android:background="@color/background"
+            android:textColor="@color/text" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text="Offers"
+        android:id="@+id/textOffersOB"
+        android:layout_weight="0.03"
+        android:layout_alignStart="@+id/textDescriptionOB"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/borderDescriptionOB"
+        android:textColor="@color/text" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listOffersOB"
+        android:layout_marginLeft="36dp"
+        android:layout_below="@id/textOffersOB"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        android:id="@+id/borderGeolocationOB"
+        android:padding="2dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/listOffersOB"
+        android:layout_alignStart="@+id/borderDescriptionOB"
+        android:layout_alignEnd="@id/borderDescriptionOB"
+        android:background="@color/editableText"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X: "
+            android:inputType="numberDecimal"
+            android:id="@+id/editXCoordinateOB"
+            android:background="@color/button"
+            android:textColor="@color/text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Y: "
+            android:inputType="numberDecimal"
+            android:id="@+id/editYCoordinateOB"
+            android:layout_below="@id/editXCoordinateOB"
+            android:background="@color/button"
+            android:textColor="@color/text" />
+    </RelativeLayout>
+
+</RelativeLayout>

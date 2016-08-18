@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="#242424" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameListOffer"
+        android:paddingTop="2dp"
+        android:paddingStart="2dp"
+        android:text="&lt;Pokémon>"
+        android:textColor="@color/text"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/offerListOffer"
+        android:paddingEnd="2dp"
+        android:text="$0.00/hr"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@id/nameListItem"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acceptListOffer"
+        android:onClick="acceptOffer"
+        android:paddingTop="2dip"
+        android:paddingBottom="3dip"
+        android:text="Accept"
+        android:textColor="@color/text"
+        android:background="@color/button"
+        android:layout_marginStart="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/nameListOffer"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/declineListOffer"
+        android:onClick="declineOffer"
+        android:paddingTop="2dip"
+        android:paddingBottom="3dip"
+        android:text="Decline"
+        android:textColor="@color/text"
+        android:background="@color/button"
+        android:layout_marginEnd="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/nameListOffer"
+        android:textSize="20dp" />
+
+</RelativeLayout>

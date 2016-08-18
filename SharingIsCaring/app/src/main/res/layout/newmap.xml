@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:id="@+id/maplayout">
+    </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/showMap"
+        android:text="DISPLAY GOOGLE MAP"
+        android:textColor="#EAEAEA"
+        android:background="#121212"
+        android:layout_below="@+id/maplayout"/>
+
+</RelativeLayout>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#424242" >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        style="@style/Base.DialogWindowTitle.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&lt;Pokémon>"
+        android:textColor="@color/text"
+        android:id="@+id/editNameTA"
+        android:autoText="false"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="34dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_below="@id/editNameTA"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/dividerTA"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/text" >
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text="Available"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:id="@+id/editStatusTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/dividerTA"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Owner: "
+        android:id="@+id/textOwnerTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/editStatusTA"
+        android:layout_alignStart="@+id/editStatusTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="&lt;Trainer>"
+        android:id="@+id/editOwnerTA"
+        android:background="@color/button"
+        android:textColor="@color/text"
+        android:onClick="otherTrainerCard"
+        android:layout_alignBaseline="@+id/textOwnerTA"
+        android:layout_toEndOf="@+id/textOwnerTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Lv."
+        android:id="@+id/textLevelTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textOwnerTA"
+        android:layout_alignStart="@+id/textOwnerTA" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editLevelTA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textLevelTA"
+        android:layout_toEndOf="@+id/textLevelTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editType1TA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/textLevelTA"
+        android:layout_alignStart="@+id/textLevelTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" / "
+        android:id="@+id/dividerTypeTA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/editType1TA"
+        android:layout_toEndOf="@+id/editType1TA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editType2TA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/editType1TA"
+        android:layout_toEndOf="@+id/dividerTypeTA" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/photoTA"
+        android:src="@drawable/ic_action_name3"
+        android:onClick="photo"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/editType1TA"
+        android:layout_alignStart="@+id/editType1TA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nature: "
+        android:id="@+id/textNatureTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/photoTA"
+        android:layout_alignStart="@+id/editType1TA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editNatureTA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textNatureTA"
+        android:layout_alignEnd="@id/editStatusTA"
+        android:layout_toEndOf="@+id/textNatureTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ability: "
+        android:id="@+id/textAbilityTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textNatureTA"
+        android:layout_alignStart="@+id/editType1TA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editAbilityTA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textAbilityTA"
+        android:layout_alignStart="@id/editNatureTA"
+        android:layout_alignEnd="@id/editStatusTA"
+        android:layout_toEndOf="@+id/textNatureTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item: "
+        android:id="@+id/textItemTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textAbilityTA"
+        android:layout_alignStart="@+id/editType1TA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editItemTA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@+id/textItemTA"
+        android:layout_alignStart="@id/editNatureTA"
+        android:layout_alignEnd="@id/editStatusTA"
+        android:layout_toEndOf="@+id/textItemTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="26dp"
+        android:text="Offer: $"
+        android:id="@+id/textOfferTA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@id/editStatusTA"
+        android:layout_marginStart="9dp"
+        android:layout_toEndOf="@id/photoTA" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text=""
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        android:id="@+id/editOfferTA"
+        android:background="@color/editableText"
+        android:textColor="@color/text"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@id/textOfferTA"
+        android:layout_toEndOf="@id/textOfferTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="HP: "
+        android:id="@+id/textHPTA"
+        android:textColor="@color/text"
+        android:layout_alignBaseline="@id/editOwnerTA"
+        android:layout_marginStart="48dp"
+        android:layout_toEndOf="@id/photoTA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editHPTA"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@id/textHPTA"
+        android:layout_alignStart="@+id/editDefenseTA"
+        android:layout_toEndOf="@id/textHPTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Attack: "
+        android:id="@+id/textAttackTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_alignBaseline="@id/editLevelTA"
+        android:layout_alignStart="@id/textHPTA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editAttackTA"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editHPTA"
+        android:layout_alignBaseline="@id/textAttackTA"
+        android:layout_alignStart="@+id/editDefenseTA"
+        android:layout_toEndOf="@id/textAttackTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Defense: "
+        android:id="@+id/textDefenseTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_alignBaseline="@id/editType2TA"
+        android:layout_alignStart="@id/textAttackTA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editDefenseTA"
+        android:textColor="@color/text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@id/textDefenseTA"
+        android:layout_toEndOf="@id/textDefenseTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sp. Atk: "
+        android:id="@+id/textSpAtkTA"
+        android:textColor="@color/text"
+        android:layout_alignTop="@id/photoTA"
+        android:layout_alignStart="@id/textDefenseTA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editSpAtkTA"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editDefenseTA"
+        android:layout_alignBaseline="@id/textSpAtkTA"
+        android:layout_alignStart="@+id/editDefenseTA"
+        android:layout_toEndOf="@id/textSpAtkTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sp. Def: "
+        android:id="@+id/textSpDefTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textSpAtkTA"
+        android:layout_alignStart="@id/textSpAtkTA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editSpDefTA"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editSpAtkTA"
+        android:layout_alignBaseline="@id/textSpDefTA"
+        android:layout_alignStart="@+id/editDefenseTA"
+        android:layout_toEndOf="@id/textSpDefTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Speed: "
+        android:id="@+id/textSpeedTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textSpDefTA"
+        android:layout_alignStart="@id/textSpDefTA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:inputType="number"
+        android:id="@+id/editSpeedTA"
+        android:textColor="@color/text"
+        android:layout_alignEnd="@id/editSpDefTA"
+        android:layout_alignBaseline="@id/textSpeedTA"
+        android:layout_alignStart="@+id/editDefenseTA"
+        android:layout_toEndOf="@id/textSpeedTA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24dp"
+        android:text="Moves"
+        android:id="@+id/textMovesTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="26dp"
+        android:layout_below="@id/textSpeedTA"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@id/editNatureTA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="None"
+        android:inputType="text"
+        android:id="@+id/editMove1TA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textMovesTA"
+        android:layout_marginStart="10dp"
+        android:layout_alignStart="@id/textMovesTA"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editMove2TA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove1TA"
+        android:layout_alignStart="@+id/editMove1TA"
+        android:layout_alignEnd="@id/editMove1TA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editMove3TA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove2TA"
+        android:layout_alignStart="@+id/editMove2TA"
+        android:layout_alignEnd="@id/editMove2TA" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:inputType="text"
+        android:id="@+id/editMove4TA"
+        android:textColor="@color/text"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/editMove3TA"
+        android:layout_alignStart="@+id/editMove3TA"
+        android:layout_alignEnd="@id/editMove3TA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28dp"
+        android:text="Description"
+        android:id="@+id/textDescriptionTA"
+        android:textColor="@color/text"
+        android:layout_marginTop="18dp"
+        android:layout_below="@id/textItemTA"
+        android:layout_marginStart="18dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:id="@+id/borderDescriptionTA"
+        android:padding="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textDescriptionTA"
+        android:layout_alignStart="@+id/textItemTA"
+        android:layout_alignEnd="@id/editMove4TA"
+        android:background="@color/editableText" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:inputType="text"
+            android:gravity="top|left"
+            android:id="@+id/editDescriptionTA"
+            android:background="@color/background"
+            android:textColor="@color/text" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Make Offer"
+        android:id="@+id/buttonOffer"
+        android:onClick="makeOffer"
+        android:textColor="@color/text"
+        android:background="@color/button"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel Offer"
+        android:id="@+id/buttonCancel"
+        android:onClick="cancelOffer"
+        android:textColor="@color/text"
+        android:background="@color/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/borderDescriptionTA"
+        android:layout_marginBottom="24dp"/>
+
+</RelativeLayout>
